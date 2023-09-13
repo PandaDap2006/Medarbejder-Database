@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Medarbejder Database</title>
+	</head>
+
+	<link rel="stylesheet" href="style/index.css">
+	<script src="../dist/script/index.js"></script>
+
+	<body onload="loadWorkerList()">
+		<div class="top_panel">
+			<button id="add_worker_btn">Tilføj Medarbejder</button>
+		</div>
+		<div id="worker_container">
+		</div>
+	</body>
+
+	<template id="worker_item_template">
+		<div class="worker_item">
+			<img class="worker_profile_img" src="../graphics/user.jpg"></img>
+			<div style="height: 10px;"></div>
+			<p>(Navn)</p>
+			<p>(Stilling)</p>
+		</div>
+	</template>
+</html>
