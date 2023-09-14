@@ -7,6 +7,7 @@ p {
 }
 
 .button {
+	transition: background-color .2s ease-in-out;
 	background-color: rgb(150, 150, 150);
 	padding: 15px 10px;
 	border-radius: 5px;
@@ -23,6 +24,7 @@ p {
 }
 
 .worker_item {
+	transition: scale .2s ease-in-out;
 	display: grid;
 	justify-content: center;
 	align-items: center;
@@ -31,6 +33,10 @@ p {
 	padding: 10px;
 	border-radius: 2vw;
 	font-size: 22px;
+}
+
+.worker_item:hover {
+	scale: 1.05;
 }
 
 .worker_profile_img {

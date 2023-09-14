@@ -13,9 +13,11 @@ function loadWorker() {
 			const nameElem = document.getElementById("name");
 			const positionElem = document.getElementById("position");
 
+			document.title = json["name"] + " | Worker page"
 			if (nameElem && positionElem) {
 				nameElem.textContent = json["name"];
 				positionElem.textContent = json["position"];
+				
 			}
 		}).catch((error) => {
 			console.error("Error during fetching or parsing JSON:", error);

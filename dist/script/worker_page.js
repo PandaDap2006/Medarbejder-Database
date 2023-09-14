@@ -12,6 +12,7 @@ function loadWorker() {
             json = json[workerId];
             var nameElem = document.getElementById("name");
             var positionElem = document.getElementById("position");
+            document.title = json["name"] + " | Worker page";
             if (nameElem && positionElem) {
                 nameElem.textContent = json["name"];
                 positionElem.textContent = json["position"];
