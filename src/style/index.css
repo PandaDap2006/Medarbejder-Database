@@ -6,11 +6,20 @@ p {
 	margin: 0;
 }
 
+.button {
+	background-color: rgb(150, 150, 150);
+	padding: 15px 10px;
+	border-radius: 5px;
+}
+
+.button:hover {
+	background-color: rgb(160, 160, 160);
+}
+
 .top_panel {
 	background-color: rgb(200, 200, 200);
 	padding: 10px;
 	display: flex;
-	justify-content: flex-end;
 }
 
 .worker_item {

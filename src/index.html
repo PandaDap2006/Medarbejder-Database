@@ -11,18 +11,18 @@
 
 	<body onload="loadWorkerList()">
 		<div class="top_panel">
-			<button id="add_worker_btn">Tilføj Medarbejder</button>
+			<a href="worker_register.html" style="margin-left: auto; height: fit-content; font-size: 25px;" class="button">Tilføj Medarbejder</a>
 		</div>
 		<div id="worker_container">
 		</div>
 	</body>
 
 	<template id="worker_item_template">
-		<div class="worker_item">
+		<button class="worker_item">
 			<img class="worker_profile_img" src="../graphics/user.jpg"></img>
 			<div style="height: 10px;"></div>
 			<p>(Navn)</p>
 			<p>(Stilling)</p>
-		</div>
+		</button>
 	</template>
 </html>

@@ -1,5 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 function loadWorkerList() {
     var container = document.getElementById("worker_container");
     var template = document.getElementById("worker_item_template");
@@ -9,11 +8,17 @@ function loadWorkerList() {
         }
         return response.json();
     }).then(function (json) {
-        for (var key in json) {
+        var _loop_1 = function (key) {
             var tempClone = template.content.cloneNode(true);
             tempClone.children[0].children[2].innerHTML = json[key]["name"];
             tempClone.children[0].children[3].innerHTML = json[key]["position"];
+            tempClone.children[0].addEventListener("click", function () {
+                window.location.href = "worker_page.html?worker=" + key;
+            });
             container.appendChild(tempClone);
+        };
+        for (var key in json) {
+            _loop_1(key);
         }
     }).catch(function (error) {
         console.error("Error during fetching or parsing JSON:", error);
