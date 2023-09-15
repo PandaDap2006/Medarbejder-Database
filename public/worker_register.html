@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Tilføj Medarbejder</title>
+	</head>
+
+	<link rel="stylesheet" href="style/index.css">
+
+	<body>
+		<div class="top_panel">
+			<a href="index.html" style="margin-left: auto; height: fit-content; font-size: 25px;" class="button">back</a>
+		</div>
+		<div style="margin: 20px;">
+			<p>Navn</p>
+			<Input id="name_input"></Input>
+			<div style="height: 20px;"></div>
+			<p>Stilling</p>
+			<Input id="position_input"></Input>
+			<div style="height: 40px;"></div>
+			<Button class="button" style="font-size: 20px;" onclick="registerWorker()">Tilføj Medarbjeder</Button>
+		</div>
+
+		<script> const exports = {}</script>
+		<script type="module" src="../public/buildjs/worker_register.js"></script>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Medarbejder Database</title>
+	</head>
+
+	<link rel="stylesheet" href="style/index.css">
+
+	<body>
+		<div class="top_panel">
+			<a href="worker_register.html" style="margin-left: auto; height: fit-content; font-size: 25px;" class="button">Tilføj Medarbejder</a>
+		</div>
+		<div id="worker_container"></div>
+
+		<script> const exports = {}</script>
+		<script type="module" src="./buildjs/index.js"></script>
+		<script type="module">
+			import { loadWorkers } from "./buildjs/index.js"; 
+			document.addEventListener('DOMContentLoaded', function () {
+				loadWorkers();
+			});
+		</script>
+	</body>
+
+	<template id="worker_item_template">
+		<div class="worker_item">
+			<img class="worker_profile_img" src="../graphics/user.jpg"></img>
+			<div style="height: 10px;"></div>
+			<p>(Navn)</p>
+			<p>(Stilling)</p>
+		</div>
+	</template>
+</html>
