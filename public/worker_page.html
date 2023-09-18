@@ -4,9 +4,9 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Worker page</title>
-	</head>
 
-	<link rel="stylesheet" href="style/index.css">
+		<link rel="stylesheet" href="./style/index.css">
+	</head>
 
 	<body>
 		<div class="top_panel">
@@ -15,10 +15,14 @@
 				<h1 id="name">(Navn)</h1>
 				<h2 id="position">(Stilling)</h2>
 			</div>
-			<a href="index.html" style="margin-left: auto; height: fit-content; font-size: 25px;" class="button">back</a>
+			<a id="edit_btn" href="" style="margin-left: auto; height: fit-content; font-size: 25px;" class="button">Rediger</a>
+			<a href="./index.html" style="margin-left: 10px; height: fit-content; font-size: 25px;" class="button">Tilbage</a>
 		</div>
 
 		<script> const exports = {}</script>
 		<script type="module" src="../public/buildjs/worker_page.js"></script>
 	</body>
+
+	<template id="stat_template">
+	</template>
 </html>

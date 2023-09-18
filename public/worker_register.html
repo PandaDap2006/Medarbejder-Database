@@ -4,22 +4,27 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Tilføj Medarbejder</title>
-	</head>
 
-	<link rel="stylesheet" href="style/index.css">
+		<link rel="stylesheet" href="./style/index.css">
+	</head>
 
 	<body>
 		<div class="top_panel">
-			<a href="index.html" style="margin-left: auto; height: fit-content; font-size: 25px;" class="button">back</a>
+			<a href="./index.html" style="margin-left: auto; height: fit-content;" class="button">Tilbage</a>
 		</div>
 		<div style="margin: 20px;">
-			<p>Navn</p>
-			<Input id="name_input"></Input>
+			<input type="file" id="profile_img" accept="image/*" name="filename">
 			<div style="height: 20px;"></div>
-			<p>Stilling</p>
-			<Input id="position_input"></Input>
+			<p>Navn *</p>
+			<input id="name_input">
+			<div style="height: 20px;"></div>
+			<p>Stilling *</p>
+			<input id="position_input">
 			<div style="height: 40px;"></div>
-			<Button class="button" style="font-size: 20px;" onclick="registerWorker()">Tilføj Medarbjeder</Button>
+			<div id="worker_register_options">
+				<button id="add_worker_btn" class="button">Tilføj Medarbejder</button>
+				<button id="delete_btn" style="background-color: red;" class="button">Slet</button>
+			</div>
 		</div>
 
 		<script> const exports = {}</script>
