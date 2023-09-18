@@ -2,13 +2,15 @@ import { getWorkerJson } from "./index.js";
 const urlParams = new URLSearchParams(window.location.search);
 const workerID = urlParams.get("worker");
 if (workerID) {
-    getWorkerJson().then((json) => {
+    const json = getWorkerJson();
+    if (json) {
         const nameElem = document.getElementById("name");
         const positionElem = document.getElementById("position");
-        document.title = json.name + " | Worker page";
+        document.title = json[workerID].name + " | Worker page";
         if (nameElem && positionElem) {
             nameElem.textContent = json[workerID].name;
             positionElem.textContent = json[workerID].position;
         }
-    });
+    }
+    document.getElementById("edit_btn").href = "worker_register.html?worker=" + workerID;
 }

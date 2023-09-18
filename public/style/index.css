@@ -6,11 +6,21 @@ p {
 	margin: 0;
 }
 
+a {
+	all: unset;
+}
+
+button {
+	all: unset;
+}
+
 .button {
 	transition: background-color .2s ease-in-out;
 	background-color: rgb(150, 150, 150);
 	padding: 15px 10px;
 	border-radius: 5px;
+	cursor: pointer;
+	font-size: 25px;
 }
 
 .button:hover {
@@ -57,7 +67,7 @@ p {
 	}
 }
 
-#add_worker_btn {
+#worker_register_options {
 	height: 60px;
 	font-size: 20px;
 }
@@ -69,12 +79,12 @@ p {
 	padding: 10px;
 }
 @media screen and (max-width: 1000px) {
-	#worker_panel {
+	#worker_container {
 		grid-template-columns: repeat(2, 1fr);
 	}
 }
 @media screen and (max-width: 500px) {
-	#worker_panel {
+	#worker_container {
 		grid-template-columns: repeat(1, 1fr);
 	}
 }
