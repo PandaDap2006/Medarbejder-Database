@@ -6,6 +6,8 @@
 		<title>Tilføj Medarbejder</title>
 
 		<link rel="stylesheet" href="./style/index.css">
+
+		<link rel="stylesheet" href="./style/index.css">
 	</head>
 
 	<body>
@@ -17,10 +19,20 @@
 			<div style="height: 20px;"></div>
 			<p>Navn *</p>
 			<input id="name_input">
+			<input type="file" id="profile_img" accept="image/*" name="filename">
+			<div style="height: 20px;"></div>
+			<p>Navn *</p>
+			<input id="name_input">
 			<div style="height: 20px;"></div>
 			<p>Stilling *</p>
 			<input id="position_input">
+			<p>Stilling *</p>
+			<input id="position_input">
 			<div style="height: 40px;"></div>
+			<div id="worker_register_options">
+				<button id="add_worker_btn" class="button">Tilføj Medarbejder</button>
+				<button id="delete_btn" style="background-color: red;" class="button">Slet</button>
+			</div>
 			<div id="worker_register_options">
 				<button id="add_worker_btn" class="button">Tilføj Medarbejder</button>
 				<button id="delete_btn" style="background-color: red;" class="button">Slet</button>

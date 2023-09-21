@@ -28,6 +28,10 @@ function registerWorker() {
         if (!workerID) {
             workerID = nameInput.value.replace(" ", "_").toLowerCase();
         }
+    if (nameInput.value && positionInput.value) {
+        if (!workerID) {
+            workerID = nameInput.value.replace(" ", "_").toLowerCase();
+        }
         json[workerID] = {
             "name": nameInput.value,
             "position": positionInput.value,

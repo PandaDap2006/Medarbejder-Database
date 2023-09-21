@@ -8,8 +8,11 @@ const textDict = {
 if (workerID) {
     const json = getWorkerJson();
     if (json) {
+    const json = getWorkerJson();
+    if (json) {
         const nameElem = document.getElementById("name");
         const positionElem = document.getElementById("position");
+        document.title = json[workerID].name + " | Worker page";
         document.title = json[workerID].name + " | Worker page";
         if (nameElem && positionElem) {
             nameElem.textContent = json[workerID].name;
