@@ -18,11 +18,4 @@ export function getWorkerJson() {
     else {
         return {};
     }
-    const data = localStorage.getItem("workers_data");
-    if (data) {
-        return JSON.parse(data);
-    }
-    else {
-        return {};
-    }
 }

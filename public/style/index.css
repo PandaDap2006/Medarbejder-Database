@@ -14,14 +14,6 @@ button {
 	all: unset;
 }
 
-a {
-	all: unset;
-}
-
-button {
-	all: unset;
-}
-
 .button {
 	transition: outline .2s ease-in-out;
 	background-color: rgb(150, 150, 150);
@@ -88,12 +80,17 @@ button {
 	padding: 10px;
 }
 @media screen and (max-width: 1000px) {
-	#worker_panel {
+	.container {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+@media screen and (max-width: 750px) {
+	.container {
 		grid-template-columns: repeat(2, 1fr);
 	}
 }
-@media screen and (max-width: 500px) {
-	#worker_panel {
+@media screen and (max-width: 400px) {
+	.container {
 		grid-template-columns: repeat(1, 1fr);
 	}
 }

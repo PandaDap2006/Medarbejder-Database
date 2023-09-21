@@ -8,7 +8,7 @@ const textDict = {
 document.addEventListener("DOMContentLoaded", () => {
 	const urlParams = new URLSearchParams(window.location.search);
 	const workerID = urlParams.get("worker");
-	
+
 	if (workerID) {
 		const json = getWorkerJson();
 		if (json) {
