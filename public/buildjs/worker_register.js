@@ -15,7 +15,6 @@ if (workerID) {
     positionInput.value = json[workerID].position;
     add_worker_btn.textContent = "Rediger Medarbejder";
     delete_btn.addEventListener("click", function () {
-        let json = getWorkerJson();
         delete json[workerID];
         localStorage.setItem("workers_data", JSON.stringify(json, null, 4));
         window.location.href = "index.html";
@@ -32,6 +31,10 @@ function registerWorker() {
         json[workerID] = {
             "name": nameInput.value,
             "position": positionInput.value,
+            "stats": {
+                "hours_worked": [],
+                "sodas_drank": [],
+            }
         };
         console.log(json[workerID]);
         localStorage.setItem("workers_data", JSON.stringify(json, null, 4));

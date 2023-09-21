@@ -23,7 +23,6 @@ if (workerID) {
 	add_worker_btn.textContent = "Rediger Medarbejder"
 
 	delete_btn.addEventListener("click", function() {
-		let json = getWorkerJson();
 		delete json[workerID as string];
 		localStorage.setItem("workers_data", JSON.stringify(json, null, 4))
 

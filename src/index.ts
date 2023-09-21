@@ -1,29 +1,24 @@
-export function loadWorkers() {
+document.addEventListener("DOMContentLoaded", () => {
 	const container:HTMLElement = document.getElementById("worker_container") as HTMLElement;
 	const template:HTMLTemplateElement = document.getElementById("worker_item_template") as HTMLTemplateElement;
 
 	const json = getWorkerJson();
-	for (const key in json) {
-		const tempClone:HTMLTemplateElement = template.content.cloneNode(true) as HTMLTemplateElement;
-		tempClone.children[0].children[2].innerHTML = json[key].name;
-		tempClone.children[0].children[3].innerHTML = json[key].position;
-		(tempClone.children[0] as HTMLAnchorElement).href = "worker_page.html?worker=" + key;
-		container.appendChild(tempClone);
+	for (const workerID in json) {
+		const templateClone:HTMLTemplateElement = template.content.cloneNode(true) as HTMLTemplateElement;
+		templateClone.children[0].children[1].innerHTML = json[workerID].name;
+		templateClone.children[0].children[2].innerHTML = json[workerID].position;
+		(templateClone.children[0] as HTMLAnchorElement).href = "worker_page.html?worker=" + workerID;
+		container.appendChild(templateClone);
 	}
-}
+});
 
-export interface workerData {
+export interface WorkerData {
 	name: string;
 	position: string;
-	stats: workerStats;
+	stats: { [key: string]: number[] };
 }
 
-export interface workerStats {
-	hours_worked: number[];
-	sodas_drank: number[];
-}
-
-export function getWorkerJson(): { [key: string]: workerData } {
+export function getWorkerJson(): { [key: string]: WorkerData } {
 	const data = localStorage.getItem("workers_data");
 	if (data) {
 		return JSON.parse(data);
