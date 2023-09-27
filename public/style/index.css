@@ -28,6 +28,19 @@ button {
 	outline: solid white 1px;
 }
 
+.number_button {
+	cursor: pointer;
+	display: block;
+	font-size: 30px;
+	background: white;
+	outline: solid black 2px;
+	padding: 0px 4px;
+}
+.number_button:hover {
+	color: red;
+}
+
+
 .top_panel {
 	background-color: rgb(200, 200, 200);
 	padding: 10px;
@@ -42,6 +55,13 @@ button {
 	padding: 10px;
 	border-radius: 25px;
 	font-size: 22px;
+}
+
+.stat_numbers {
+	overflow-x: scroll;
+	display: flex;
+	padding: 2px;
+	margin-top: 10px;
 }
 
 .worker_profile_img {

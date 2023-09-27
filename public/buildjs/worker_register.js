@@ -14,6 +14,7 @@ if (workerID) {
     nameInput.value = json[workerID].name;
     positionInput.value = json[workerID].position;
     add_worker_btn.textContent = "Rediger Medarbejder";
+    document.title = "Rediger Medarbejder";
     delete_btn.addEventListener("click", function () {
         delete json[workerID];
         localStorage.setItem("workers_data", JSON.stringify(json, null, 4));

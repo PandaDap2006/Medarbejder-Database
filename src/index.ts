@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+export function loadWorkers() {
 	const container:HTMLElement = document.getElementById("worker_container") as HTMLElement;
 	const template:HTMLTemplateElement = document.getElementById("worker_item_template") as HTMLTemplateElement;
 
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		(templateClone.children[0] as HTMLAnchorElement).href = "worker_page.html?worker=" + workerID;
 		container.appendChild(templateClone);
 	}
-});
+}
 
 export interface WorkerData {
 	name: string;

@@ -9,6 +9,15 @@
 	</head>
 
 	<body>
+		<template id="stat_template">
+			<div class="container_item" style="width: 300px;">
+				<p style="font-size: 100px; background-color: white; border-radius: 20px; margin: 0px 10px;">0</p>
+				<p></p>
+				<input style="width: 80px; height: 40px; font-size: 25px;" type="number">
+				<div class="stat_numbers"></div>
+			</div>
+		</template>
+
 		<div class="top_panel">
 			<img src="../graphics/user.jpg" style="width: 200px; height: 200px;">
 			<div style="margin: auto 20px; font-size: 20px;">
@@ -21,13 +30,12 @@
 		<div id="stats_container" class="container"></div>
 
 		<script>const exports = {}</script>
-		<script type="module" src="../public/buildjs/worker_page.js"></script>
+		<script type="module" src="./buildjs/worker_page.js"></script>
+		<script type="module">
+			import { loadStats } from "./buildjs/worker_page.js";
+			document.addEventListener("DOMContentLoaded", () => {
+				loadStats()
+			});
+		</script>
 	</body>
-
-	<template id="stat_template">
-		<div class="container_item">
-			<p style="font-size: 100px; background-color: white; border-radius: 20px; margin: 0px 10px;">0</p>
-			<p></p>
-		</div>
-	</template>
 </html>

@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+export function loadWorkers() {
     const container = document.getElementById("worker_container");
     const template = document.getElementById("worker_item_template");
     const json = getWorkerJson();
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
         templateClone.children[0].href = "worker_page.html?worker=" + workerID;
         container.appendChild(templateClone);
     }
-});
+}
 export function getWorkerJson() {
     const data = localStorage.getItem("workers_data");
     if (data) {

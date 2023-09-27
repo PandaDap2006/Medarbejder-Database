@@ -21,6 +21,7 @@ if (workerID) {
 	positionInput.value = json[workerID].position;
 
 	add_worker_btn.textContent = "Rediger Medarbejder"
+	document.title = "Rediger Medarbejder"
 
 	delete_btn.addEventListener("click", function() {
 		delete json[workerID as string];
